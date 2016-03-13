@@ -1,0 +1,63 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  background: #eeeeee;
+}
+
+#page h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+
+}
+
+#page p {
+  margin: 25px 0 10px 10px;
+  text-align: left;
+}
+
+#page p + p {
+  margin-top: 20px;
+}
+
+#page {
+  margin: 14px auto;
+  padding: 25px 0px 20px;
+  width: 600px;
+  height: 100%;
+  background-color: #ffffff;
+  line-height: 1.5;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.line {  
+  border-bottom: 1px solid #696969;
+  width: 500px;
+  margin: 0px auto;
+}
+ 
+.header {
+  text-align: center;
+}
+
+img {
+  width: 240px;
+  height: auto;
+ }
+
+#page ul {
+  list-style-type: disc;
+  padding-left: 40px;
+  margin: 10px 0 25px 0;
+}
+
+.phone, a {
+  display: block;
+ }
+
+.other {
+  white-space: pre-line;
+  padding-left: 20px;
+  width: 500px;
+  margin: 0 auto;
+}
