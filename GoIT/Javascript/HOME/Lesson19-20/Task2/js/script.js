@@ -19,7 +19,7 @@
 		return { "name": obj.name, "friends": obj.friends.length }
 	});
 
-	//return the array of presons names ordered by friens quantity
+	//return the array of persons names ordered by friens quantity
 	var personsNames  = _.map(_.sortBy(persons, "friends"), "name");
 
 	console.log('\n2. Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (friends): \n', personsNames);
