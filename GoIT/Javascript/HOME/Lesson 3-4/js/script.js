@@ -24,54 +24,67 @@ var app = {
 
   generateQuestions: function(questionsAmount, answersAmount) {
 
-    for (var i = 0; i < questionsAmount; i++) {
+  for (var i = 0; i < questionsAmount; i++) {
 
-      this.createElement({
-        tagName: 'h3',
-        content: 'Вопрос №' + (i + 1),
-        parentElement: form
-      });
+    this.createElement({
+      tagName: 'h3',
+      content: 'Вопрос №' + (i + 1),
+      parentElement: form
+    });
 
-      for (var j = 0; j < answersAmount; j++) {
+    var ul = this.createElement({
+      tagName: 'ul',
+      parentElement: form
+    });
 
-        var label = this.createElement({
-          tagName: 'label',
-          content: 'Вариант ответа №' + (j + 1),
-          parentElement: form
-        });
+    for (var j = 0; j < answersAmount; j++) {
 
-        var checkbox = this.createElement({
-          tagName: 'input',
-          inputType: 'checkbox',
-        });
+     var li = this.createElement({
+      tagName: 'li',
+      parentElement: ul
+    });
 
-        label.insertAdjacentElement('afterBegin', checkbox);
-      }
-    };
-  }
+     var label = this.createElement({
+      tagName: 'label',
+      content: 'Вариант ответа №' + (j + 1),
+      parentElement: li
+    });
+
+     var checkbox = this.createElement({
+      tagName: 'input',
+      inputType: 'checkbox'
+    });
+
+     label.insertAdjacentElement('afterBegin', checkbox);
+   }
+ }
 }
+};
 
-var body = document.querySelector('body');
 
-app.createElement({
-  tagName: 'h2',
+var wrapper = app.createElement({
+ tagName: 'div',
+ parentElement: document.body,
+ className: 'wrapper'
+});
+
+app.createElement ({
+  tagName: 'h1',
   content: 'Тест по программированию',
-  className: 'col-md-6 col-md-offset-3',
-  parentElement: body
+  parentElement: wrapper
 });
 
 var form = app.createElement({
   tagName: 'form',
-  className: 'col-md-6 col-md-offset-2',
-  parentElement: body
+  parentElement: wrapper
 });
 
 app.generateQuestions(3, 3);
 
-app.createElement({
-  tagName: 'button',
-  inputType: 'button',
+app.createElement ({
+  tagName: 'input',
+  inputType: 'submit',
   content: 'Проверить мои результаты',
-  className: 'btn btn-primary btn-lg',
+  className: 'btn btn-primary',
   parentElement: form
 });
