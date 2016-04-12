@@ -1,0 +1,25 @@
+{
+  "name": "exam_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt-contrib-less": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yuliaiul/yuliaiul.github.io.git"
+  },
+  "author": "Yuliia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yuliaiul/yuliaiul.github.io/issues"
+  },
+  "homepage": "https://github.com/Yuliaiul/yuliaiul.github.io#readme"
+}
